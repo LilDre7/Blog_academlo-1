@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2 family=Dancing+Script:wght@500&display=swap');
+/* letra de fonts => font-family: 'PT Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=PT+Mono&display=swap');
+/* letra de fonts => font-family: 'Dancing Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Noto+Sans+Egyptian+Hieroglyphs&family=PT+Mono&display=swap');
+/* letra de fonst => font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif; */
+
+/* Hoja de estilo externa */
+/* https://necolas.github.io/normalize.css/8.0.1/normalize.css */
+:root {
+    --font-principal: font-family: 'PT Mono', monospace; 
+    --font-second: font-family: 'Dancing Script', cursive;
+    --font-titles: font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+}
+
+body {
+    color: aliceblue;
+    font-family: var(--font-pricipal);
+}
+
+
+ul , ol {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 , h2 , h3 {
+    font-family: 'PT Mono', monospace;
+    font-weight: 700px;
+}
+
+img {
+    max-width: 100%;
+    font-weight: 200;
+}
+
+/* clases reutilizables */
+
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1024px;
+    padding: 0 1rem;
+}
+
+.header .container {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;   
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.logo__img {
+    width: 50px;
+    height: 50px;
+}
+
+.text__blog {
+    font-family: var(--font-second);
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+}
+
+.text__pets {
+    font-weight: 800;
+}
+
+.nav {
+    display: block;
+    font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.nav_item {
+    display: list-item;
+}
+
+/* Section numero 2  llamada hero*/
+
+.main {
+    color: rgb(64, 59, 59);
+
+}
+
+.hero {
+    border: 1px solid;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Source/photo-1591300673309-092e8afa699b.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.overline{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.hero .container {
+    position: relative;
+    color: aliceblue;
+    padding: 3rem;
+    text-align: center;
+}
+
+.hero__title {
+    position: relative;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+/* styles 2 parte del blog */
+
+.blog{
+    padding: 3rem 1rem;
+}
+
+.blog__article {
+    
+    gap: 3rem;
+}
+
+.blog .container {
+    max-width: 1024px;
+    padding: 0 1rem;
+}
+
+.blog__title  {
+    font-family: 'PT Mono', monospace;
+    padding-bottom: 1rem;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.img__1 img {
+    border-radius: 3px;
+}
+
+.container__article {
+    margin-top: 1rem;
+    padding: 10px 10px;
+}
+
+.article__title {
+    font-size: 1.60rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.article__description {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.article__enlace {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: bisque;
+    color: rgb(10, 10, 10);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.2rem;
+    margin: 10px 0px;
+}
+
+.article__enlace:hover {
+    background-color: rgb(109, 86, 86);
+    color: aliceblue;
+    transition: all 2s;
+    margin: 0 auto;
+}
+
+/* image__svg */
+
+.image__svg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://source.unsplash.com/random/1920×1080/?pets);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2rem;
+}
+
+.img--bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+}
+
+/* section adoption */
+
+.adoption {
+    display: flex;
+}
+
+.adoption .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.adoption_title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.adoption_description{
+    margin: 20px 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+/* footer */
+
+.footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+}
+
+.text__blog , .text__pets {
+    font-family: 'PT Mono', monospace;
+    color: #000;
+}
+
+.footer_copy{
+    color: black;
+}
+
+
+@media (min-width: 768px){
+    .header .container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    } 
+
+    .blog__article:nth-child(1){
+        flex-direction: row-reverse;
+    } 
+
+    .blog__article{
+        display: flex;
+        align-items: center;
+    }
+
+    .img__1 {
+        width: 50%;
+        height: 400px;
+    }
+
+    .img__1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+    }
+
+    .container__article {
+        width: 50%;
+    }
+
+    .text__blog , .text__pets {
+        font-weight: 700;
+        color: rgb(1, 1, 1);
+    }
+
+    .container {
+        width: 900px;
+        font-weight: 000;
+    }
+    .blog__title {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .article__enlace {
+        display: inline-block;
+        width: auto;        
+    }
+}
+
+@media (min-width: 890px ){
+    .container {
+        margin: 0 auto;
+        font-size: 20px;
+    }
+}
